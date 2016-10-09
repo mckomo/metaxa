@@ -14,15 +14,15 @@ introduce :foo, with_value: 'foo'
 puts foo == 'foo' # true
 puts foo === get(:foo) # true
 
-foo = 'bar'
-
-puts foo == 'bar' # true
-puts foo = get(:foo) # true
-
 set :foo, 'foobar'
 
 puts foo == 'foobar' # true
-puts foo = get(:foo) # true
+puts foo === get(:foo) # true
+
+self.foo = 'foobarbaz' # foo = ... will introduce new overlying variable
+
+puts foo == 'foobarbaz' # true
+puts foo === get(:foo) # true
 ```
 
 See more examples in `test/metaxa_test.rb` file.
@@ -45,7 +45,7 @@ Or install it yourself as:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake` to run the tests.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/test` to run the tests.
 
 ## Contributing
 
@@ -55,4 +55,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/mckomo
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
