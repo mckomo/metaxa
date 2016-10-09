@@ -1,6 +1,8 @@
 # Metaxa
 
-Metaxa enables you to dynamicly define variables in root scope (main:Object) of your program.
+[![Build Status](https://travis-ci.org/mckomo/metaxa.svg?branch=master)](https://travis-ci.org/mckomo/metaxa)
+
+Metaxa enables you to dynamically define variables in the main scope (main:Object).
 
 ## Usage
 
@@ -25,7 +27,7 @@ puts foo == 'foobarbaz' # true
 puts foo === get(:foo) # true
 ```
 
-See more examples in `test/metaxa_test.rb` file.
+See more constructive examples in `examples` dir :thumbsup:. 
 
 ## Installation
 
