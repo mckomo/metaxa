@@ -1,16 +1,15 @@
-require "metaxa/version"
+require 'metaxa/version'
 
 module Metaxa
 
    def introduce(variable, with_value: true)
+      var_module = Module.new do
+        attr_accessor variable.to_sym
+      end
 
-      module_name = "::Metaxa_#{variable}"
-
-      eval "module #{module_name}; attr_accessor :#{variable}; end;"
-      eval "include #{module_name};"
+      include var_module
 
       set variable, with_value
-
    end
 
    def get(variable)
