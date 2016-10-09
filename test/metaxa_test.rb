@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-require 'bundler/setup'
+# require 'bundler/setup'
 require 'metaxa'
 require 'test/unit'
 require 'colorize'
@@ -9,7 +9,7 @@ include Metaxa
 
 extend Test::Unit::Assertions
 
-# Test value types 
+# Test value types
 introduce :lucky_number, with_value: 14
 
 assert defined? lucky_number
@@ -21,6 +21,11 @@ set :lucky_number, 7
 
 assert_equal lucky_number, 7
 assert_equal get(:lucky_number), 7
+
+self.lucky_number = 21
+
+assert_equal lucky_number, 21
+assert_equal get(:lucky_number), 21
 
 # Test reference types
 refrence_value = Object.new
