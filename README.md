@@ -27,7 +27,7 @@ puts foo == 'foobarbaz' # true
 puts foo === get(:foo) # true
 ```
 
-See more constructive examples in `examples` dir :thumbsup:. 
+See more constructive examples in `examples` dir :sunglasses:. 
 
 ## Installation
 
