@@ -9,7 +9,9 @@ require 'json'
 
 include Metaxa
 
-colors = HTTParty.get('http://www.colourlovers.com/api/colors?format=json&numResults=30').tap do |res|
+URL = 'http://www.colourlovers.com/api/colors?format=json&numResults=30'.freez
+
+colors = HTTParty.get(URL).tap do |res|
   JSON.parse(res.body)
 end
 
