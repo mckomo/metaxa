@@ -1,2 +1,4 @@
 #!/usr/bin/env sh
-ruby 'test/metaxa_test.rb'
+ruby 'test/metaxa_main_test.rb'
+ruby 'test/metaxa_instance_test.rb'
+ruby 'test/metaxa_class_test.rb'

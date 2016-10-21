@@ -6,7 +6,7 @@ module Metaxa
       attr_accessor variable.to_sym
     end
 
-    include var_module
+    extend var_module
 
     set(variable, with_value)
   end
