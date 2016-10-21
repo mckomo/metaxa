@@ -22,7 +22,7 @@ end
 
 introduce :colors, with_value: colors.map { |c| c['name'].to_sym }
 
-Pry.start
+Pry.start # Now you can start typing color names
 
 # Usage:
 #
