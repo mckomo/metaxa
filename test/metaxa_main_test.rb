@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-# require 'bundler/setup'
+require 'bundler/setup'
 require 'metaxa'
 require 'test/unit'
 require 'colorize'
@@ -39,4 +39,4 @@ introduce :symbol_var
 
 assert defined? symbol_var
 
-puts 'Test completed'.colorize(:green)
+puts 'Main object test completed'.colorize(:green)
