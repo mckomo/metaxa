@@ -10,3 +10,6 @@
 Style/Documentation:
   Exclude:
     - '**/*'
+Style/MixinUsage:
+  Exclude:
+    - '**/*'
